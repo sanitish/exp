@@ -41,7 +41,8 @@
 
 var myObj;
 myObj = [{ "id":"gh"},
-{ "id":"ef" },{"id":"av"}];
+{ "id":"ef" },
+{ "id":"deh" },{ "id":"avdsd" }];
 
     function myFunction() {
       var parentNode = document.getElementById("myTable").parentNode;
@@ -54,13 +55,12 @@ myObj = [{ "id":"gh"},
           myObj.forEach((value)=> {
                 if (x === value.id) {
                     var RowLocation = table.rows[i].rowIndex;
-                    console.log(RowLocation+'th  position id Matches');
+                    console.log(RowLocation+1+'th  position id Matches');
                     var parent = rows[RowLocation].parentNode;
-                    if ((RowLocation > 0) && (RowLocation <= (rows.length - 1))) {
+                    if ((RowLocation => 0) && (RowLocation <= (rows.length - 1))) {
                       parent.insertBefore(rows[RowLocation], rows[RowLocation - i+c]);
-                      console.log(c);
-
                       c++;
+                      console.log(c);
                     }
                   }
         })
